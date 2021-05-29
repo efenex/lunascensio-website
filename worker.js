@@ -43,5 +43,6 @@ async function handleRequest(request) {
 
   response.headers.set('content-type', mimeTable[extension]);
   response.headers.set('content-security-policy', "img-src 'self' data:")
+  response.headers.set('cache-control', "public, max-age=2592000")
   return response;
 }
